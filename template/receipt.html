@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-3">
+    <form action="{% url 'receipt' %}" class="row g-4" method="POST">{% csrf_token %}
+        <p class="h5">RECEIPT</p><br>
+        <!-- First Name -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="Firstname" placeholder=" " name="firstname">
+                <label for="Lastname">First Name</label>
+            </div>
+        </div>
+
+        <!-- Last Name -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="Lastname" placeholder=" " name="lastname">
+                <label for="Lastname">Last Name</label>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="email" class="form-control" id="Email" placeholder=" " name="email">
+                <label for="inputEmail">Email</label>
+            </div>
+        </div>
+
+        <!-- Password -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="password" class="form-control" id="Password" placeholder=" " name="password">
+                <label for="inputPassword">Password</label>
+            </div>
+        </div>
+
+        <!-- Course -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="Course" placeholder=" " name="course">
+                <label for="Course">Course</label>
+            </div>
+        </div>
+
+        <!-- Duration -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="Duration" placeholder=" " name="duration">
+                <label for="duration">Duration</label>
+            </div>
+        </div>
+
+        <!-- Address -->
+        <div class="col-12">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="Address" placeholder=" " name="address">
+                <label for="address">Address</label>
+            </div>
+        </div>
+
+        <!-- City -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="City" placeholder=" " name="city">
+                <label for="city">City</label>
+            </div>
+        </div>
+
+        <!-- Zip Code -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="Zip" placeholder=" " name="zipp">
+                <label for="zip">Zip</label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12 d-flex justify-content-center gap-3">
+            <button type="submit" class="btn btn-primary">Print</button>
+            <button type="reset" class="btn btn-primary btn-md">Reset</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
